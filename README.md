@@ -1,5 +1,5 @@
 # Rateyourpolitician-INCOMPLETE
-# 🗳️ RateMyPolitician - Solana Voting dApp
+# 🗳️ Rateyoutpolitician - Solana Voting dApp
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
 > 
