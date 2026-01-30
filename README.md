@@ -3,7 +3,7 @@
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
 > 
-> This project was not successfully completed due to technical difficulties during setup, with wsl, compilation & time constraints. The application has not been deployed or tested.
+> This project was not successfully completed due to difficulties during setup, with wsl, compilation, time constraints. The application has not been deployed or tested.
 
 ## 📋 What This Project Was Supposed To Be
 
