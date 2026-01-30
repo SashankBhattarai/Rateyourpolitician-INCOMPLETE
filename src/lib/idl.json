@@ -1,0 +1,234 @@
+{
+  "version": "0.1.0",
+  "name": "rate_my_politician",
+  "instructions": [
+    {
+      "name": "initializePolitician",
+      "accounts": [
+        {
+          "name": "politician",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "authority",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "name",
+          "type": "string"
+        }
+      ]
+    },
+    {
+      "name": "vote",
+      "accounts": [
+        {
+          "name": "politician",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "voteRecord",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "voter",
+          "isMut": true,
+          "isSigner": true
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "approve",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "changeVote",
+      "accounts": [
+        {
+          "name": "politician",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "voteRecord",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "voter",
+          "isMut": false,
+          "isSigner": true
+        }
+      ],
+      "args": [
+        {
+          "name": "newApprove",
+          "type": "bool"
+        }
+      ]
+    },
+    {
+      "name": "getStats",
+      "accounts": [
+        {
+          "name": "politician",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [],
+      "returns": {
+        "defined": "PoliticianStats"
+      }
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Politician",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "approveCount",
+            "type": "u64"
+          },
+          {
+            "name": "disapproveCount",
+            "type": "u64"
+          },
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "VoteRecord",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "voter",
+            "type": "publicKey"
+          },
+          {
+            "name": "politician",
+            "type": "publicKey"
+          },
+          {
+            "name": "approve",
+            "type": "bool"
+          },
+          {
+            "name": "hasVoted",
+            "type": "bool"
+          },
+          {
+            "name": "timestamp",
+            "type": "i64"
+          },
+          {
+            "name": "bump",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ],
+  "types": [
+    {
+      "name": "PoliticianStats",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "approveCount",
+            "type": "u64"
+          },
+          {
+            "name": "disapproveCount",
+            "type": "u64"
+          },
+          {
+            "name": "totalVotes",
+            "type": "u64"
+          },
+          {
+            "name": "approvePercentage",
+            "type": "u8"
+          },
+          {
+            "name": "disapprovePercentage",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "NameTooLong",
+      "msg": "Politician name is too long (max 50 characters)"
+    },
+    {
+      "code": 6001,
+      "name": "AlreadyVoted",
+      "msg": "User has already voted for this politician"
+    },
+    {
+      "code": 6002,
+      "name": "NotVotedYet",
+      "msg": "User has not voted yet"
+    },
+    {
+      "code": 6003,
+      "name": "SameVote",
+      "msg": "New vote is the same as current vote"
+    },
+    {
+      "code": 6004,
+      "name": "Overflow",
+      "msg": "Numerical overflow occurred"
+    },
+    {
+      "code": 6005,
+      "name": "Underflow",
+      "msg": "Numerical underflow occurred"
+    }
+  ],
+  "metadata": {
+    "address": "YourProgramIDHere111111111111111111111111111"
+  }
+}

@@ -1,0 +1,326 @@
+.politician-card {
+  background: var(--card-bg);
+  border: 2px solid var(--border-color);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  animation: cardSlideUp 0.6s ease-out both;
+}
+
+@keyframes cardSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.politician-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-red), var(--primary-blue));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.politician-card:hover::before {
+  transform: scaleX(1);
+}
+
+.politician-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-red);
+  box-shadow: 0 20px 50px rgba(220, 38, 38, 0.3);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
+}
+
+.politician-name {
+  font-family: 'Fjalla One', sans-serif;
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+  color: var(--light-text);
+  flex: 1;
+}
+
+.vote-badge {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.5rem 0.75rem;
+  border-radius: 2px;
+  white-space: nowrap;
+  animation: badgePop 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+@keyframes badgePop {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.vote-badge.approve {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--success-green);
+  border: 1px solid var(--success-green);
+}
+
+.vote-badge.disapprove {
+  background: rgba(239, 68, 68, 0.2);
+  color: var(--danger-red);
+  border: 1px solid var(--danger-red);
+}
+
+.vote-stats {
+  margin-bottom: 2rem;
+}
+
+.total-votes {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #64748B;
+  margin-bottom: 1.5rem;
+}
+
+.stats-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stats-bars.animate .stat-bar {
+  animation: barPulse 0.6s ease-out;
+}
+
+@keyframes barPulse {
+  0%, 100% {
+    transform: scaleX(1);
+  }
+  50% {
+    transform: scaleX(1.02);
+  }
+}
+
+.stat-row {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-bar {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  position: relative;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  min-width: 80px;
+  clip-path: polygon(0 0, calc(100% - 10px) 0, 100% 50%, calc(100% - 10px) 100%, 0 100%);
+}
+
+.approve-bar {
+  background: linear-gradient(90deg, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.5));
+  border: 2px solid var(--success-green);
+}
+
+.disapprove-bar {
+  background: linear-gradient(90deg, rgba(239, 68, 68, 0.3), rgba(239, 68, 68, 0.5));
+  border: 2px solid var(--danger-red);
+}
+
+.bar-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+}
+
+.approve-bar .bar-label {
+  color: var(--success-green);
+}
+
+.disapprove-bar .bar-label {
+  color: var(--danger-red);
+}
+
+.vote-count {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 1.5rem;
+  color: var(--light-text);
+  min-width: 40px;
+  text-align: right;
+}
+
+.vote-actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.vote-btn {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 1rem;
+  border: 2px solid var(--border-color);
+  background: transparent;
+  color: var(--light-text);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.vote-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  transition: left 0.3s ease;
+}
+
+.vote-btn:hover::before {
+  left: 0;
+}
+
+.vote-btn .btn-icon {
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.vote-btn:hover .btn-icon {
+  transform: scale(1.2);
+}
+
+.approve-btn::before {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.2), rgba(16, 185, 129, 0.3));
+}
+
+.approve-btn:hover {
+  border-color: var(--success-green);
+  color: var(--success-green);
+}
+
+.disapprove-btn::before {
+  background: linear-gradient(135deg, rgba(239, 68, 68, 0.2), rgba(239, 68, 68, 0.3));
+}
+
+.disapprove-btn:hover {
+  border-color: var(--danger-red);
+  color: var(--danger-red);
+}
+
+.vote-btn.active {
+  border-width: 3px;
+}
+
+.approve-btn.active {
+  background: rgba(16, 185, 129, 0.2);
+  border-color: var(--success-green);
+  color: var(--success-green);
+}
+
+.disapprove-btn.active {
+  background: rgba(239, 68, 68, 0.2);
+  border-color: var(--danger-red);
+  color: var(--danger-red);
+}
+
+.vote-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voting-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.95);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  z-index: 10;
+  animation: fadeIn 0.3s ease;
+}
+
+.voting-spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid var(--border-color);
+  border-top-color: var(--primary-red);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+.voting-overlay p {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--light-text);
+}
+
+@media (max-width: 480px) {
+  .politician-card {
+    padding: 1.5rem;
+  }
+
+  .politician-name {
+    font-size: 1.5rem;
+  }
+
+  .stat-bar {
+    height: 40px;
+    font-size: 0.8rem;
+  }
+
+  .vote-btn {
+    font-size: 0.9rem;
+    padding: 0.875rem;
+  }
+}

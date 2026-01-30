@@ -1,0 +1,6 @@
+/* MainApp specific styles are mostly in App.css for cohesion */
+/* This file is for any component-specific overrides */
+
+.main-app {
+  position: relative;
+}
