@@ -1,4 +1,4 @@
-# Rateyourpolitician-INCOMPLETE
+<img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/c2ad4c77-8d37-4808-b27a-01f4d1009033" /># Rateyourpolitician-INCOMPLETE
 # 🗳️ Rateyourpolitician - Solana Voting dApp
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
@@ -125,6 +125,10 @@ RateMyPolitician/
 **This project does NOT work.** It cannot be run, tested, or deployed in its current state. It is submitted as an incomplete project to demonstrate the work that was done on the smart contract logic and frontend design, even though the integration was never achieved.
 
 ---
+
+**TO BE SOLVED**
+<img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/b7604d7b-2ded-4edd-8fac-12772af5380e" />
+
 
 **Submitted**: January 30, 2026  
 **Status**: Incomplete / Non-Functional  
