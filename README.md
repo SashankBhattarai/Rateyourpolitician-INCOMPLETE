@@ -1,9 +1,9 @@
-# Rateyourpolitician-INCOMPLETE
+# Rateyourpolitician-TO BE COMPLETED
 # 🗳️ Rateyourpolitician - Solana Voting dApp
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
 > 
-> This project was not successfully completed due to technical difficulties during setup, with wsl and compilation. The application was never deployed or tested.
+> This project was not successfully completed due to technical difficulties during setup, with wsl, compilation & time constraints. The application has not been deployed or tested.
 
 ## 📋 What This Project Was Supposed To Be
 
@@ -122,7 +122,7 @@ RateMyPolitician/
 
 ## ⚠️ Disclaimer
 
-**This project does NOT work.** It cannot be run, tested, or deployed in its current state. It is submitted as an incomplete project to demonstrate the work that was done on the smart contract logic and frontend design, even though the integration was never achieved.
+**This project is submitted as an incomplete project to demonstrate the work that was done on the smart contract logic and frontend design, even though the integration was not achieved.**
 
 ---
 
