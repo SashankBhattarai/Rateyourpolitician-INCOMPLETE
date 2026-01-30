@@ -1,4 +1,4 @@
-<img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/c2ad4c77-8d37-4808-b27a-01f4d1009033" /># Rateyourpolitician-INCOMPLETE
+# Rateyourpolitician-INCOMPLETE
 # 🗳️ Rateyourpolitician - Solana Voting dApp
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
@@ -127,8 +127,26 @@ RateMyPolitician/
 ---
 
 **TO BE SOLVED**
-<img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/b7604d7b-2ded-4edd-8fac-12772af5380e" />
+<img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/c2ad4c77-8d37-4808-b27a-01f4d1009033" />
 
+Compiled with problems:
+
+×
+ERROR in ./src/index.js 1:40-118
+Module not found: Error: You attempted to import /home/user/Rateyourpolitician/node_modules/react-refresh/runtime.js which falls outside of the project src/ directory. Relative imports outside of src/ are not supported. You can either move it inside src/, or add a symlink to it from project's node_modules/.
+ERROR in ./src/index.js 7:0-24
+Module not found: Error: Can't resolve './App' in '/home/user/Rateyourpolitician/src'
+
+Compiled with problems:
+×
+ERROR in ./src/index.js 1:40-118
+Module not found: Error: You attempted to import /home/user/Rateyourpolitician/node_modules/react-refresh/runtime.js which falls outside of the project src/ directory. Relative imports outside of src/ are not supported. You can either move it inside src/, or add a symlink to it from project's node_modules/.
+ERROR in ./src/index.js 7:0-27
+Module not found: Error: Can't resolve './app.js' in '/home/user/Rateyourpolitician/src'
+ERROR in ./src/index.js 1:40-118
+Module not found: Error: You attempted to import /home/user/Rateyourpolitician/node_modules/react-refresh/runtime.js which falls outside of the project src/ directory. Relative imports outside of src/ are not supported. You can either move it inside src/, or add a symlink to it from project's node_modules/.
+ERROR in ./src/index.js 7:0-27
+Module not found: Error: Can't resolve './app.js' in '/home/user/Rateyourpolitician/src'
 
 **Submitted**: January 30, 2026  
 **Status**: Incomplete / Non-Functional  
