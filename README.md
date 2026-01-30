@@ -14,7 +14,7 @@ RateMyPolitician is a decentralized voting application built on Solana blockchai
 - Change their vote at any time
 - Have all votes recorded permanently on the blockchain
 
-##📌 What Problem Does This Project Solve?
+## **📌 What Problem Does This Project Solve?**
 
 In many countries, public opinion about politicians is scattered across social media, news comments, and informal discussions. These sources are often biased, manipulable, or opaque, making it hard to understand genuine public sentiment.
 
@@ -28,7 +28,7 @@ Results are publicly verifiable
 
 By using blockchain technology, the system removes the need to trust a central authority to manage or protect voting data.
 
-##💡 Why Is This Project Interesting?
+## 💡Why Is This Project Interesting?
 
 This project is interesting because it combines decentralization with public accountability:
 
