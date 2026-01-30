@@ -3,7 +3,7 @@
 
 > **⚠️ PROJECT STATUS: INCOMPLETE - SUBMISSION AS-IS**
 > 
-> This project was not successfully completed due to technical difficulties during frontend setup. The smart contract code is complete, but the application was never deployed or tested.
+> This project was not successfully completed due to technical difficulties during setup, with wsl and compilation. The application was never deployed or tested.
 
 ## 📋 What This Project Was Supposed To Be
 
@@ -77,9 +77,7 @@ RateMyPolitician/
 │   └── App.css
 │
 ├── public/                   # Public files
-│   └── index.html
-│
-└── README.md                # This file
+    └── index.html
 ```
 
 ## 🛠️ Tech Stack (Intended)
@@ -120,22 +118,7 @@ RateMyPolitician/
 
 **Estimated Time to Complete**: 4-8 hours for someone experienced with Solana development
 
-## 💡 Lessons Learned
 
-- Solana development requires specific build environment setup
-- Webpack 5 compatibility with Solana libraries is challenging
-- Should have used a working boilerplate/template
-- Should have tested deployment earlier in the process
-- File import paths in React need careful attention
-
-## 🎓 Educational Value
-
-Despite not being complete, this project demonstrates:
-- Understanding of Solana/Anchor smart contract architecture
-- Knowledge of PDA (Program Derived Address) patterns
-- React component design for web3 applications
-- Wallet adapter integration concepts
-- On-chain data structure design
 
 ## ⚠️ Disclaimer
 
