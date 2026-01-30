@@ -20,18 +20,6 @@ In many countries, public opinion about politicians is scattered across social m
 
 This project, Rate Your Politician, aims to create a transparent and tamper-resistant way for people to express approval or disapproval of politicians, while ensuring:
 
-Each wallet can vote only once
-
-Votes cannot be secretly altered or deleted
-
-Results are publicly verifiable
-
-By using blockchain technology, the system removes the need to trust a central authority to manage or protect voting data.
-
-## 💡Why Is This Project Interesting?
-
-This project is interesting because it combines decentralization with public accountability:
-
 No central control: Votes are stored on-chain, not on a private server.
 
 Provable fairness: Anyone can verify vote counts directly from the blockchain.
@@ -40,7 +28,8 @@ User ownership: Voters interact using their own wallets, not accounts owned by a
 
 Immutability: Once a vote is recorded, it cannot be silently modified.
 
-It demonstrates how blockchain can be used outside of finance, specifically for civic engagement and public opinion tracking.
+By using blockchain technology, the system removes the need to trust a central authority to manage or protect voting data.
+
 
 ## 🚧 Current Status: NOT WORKING
 
