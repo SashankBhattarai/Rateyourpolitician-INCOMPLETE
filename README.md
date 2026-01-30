@@ -127,6 +127,8 @@ RateMyPolitician/
 ---
 
 **TO BE SOLVED**
+
+
 <img width="1447" height="729" alt="image" src="https://github.com/user-attachments/assets/c2ad4c77-8d37-4808-b27a-01f4d1009033" />
 
 Compiled with problems:
